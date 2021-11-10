@@ -12,7 +12,7 @@
 class LightScript : public atta::Script
 {
 public:
-    void update(atta::EntityId entityId, uint64_t cloneId, std::vector<atta::Component*> components, float dt) override;
+    void update(atta::Entity entity, float dt) override;
 };
 
 ATTA_REGISTER_SCRIPT(LightScript)
