@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 project(cube-factory VERSION 1.0.0 LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+find_package(atta 0.0.0.3 REQUIRED)
 
-# This time we are only using one entity script
-add_library(cubeScript SHARED
-    src/cubeScript.cpp
-)
+# Create cube script target
+atta_add_target(cubeScript "src/cubeScript.cpp")

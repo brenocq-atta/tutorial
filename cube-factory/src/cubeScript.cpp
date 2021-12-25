@@ -6,6 +6,8 @@
 //--------------------------------------------------
 #include "cubeScript.h"
 #include <atta/componentSystem/components/transformComponent.h>
+#include <atta/componentSystem/components/materialComponent.h>
+#include <atta/componentSystem/components/nameComponent.h>
 
 #define QTY_CLONES 100
 
@@ -18,12 +20,12 @@ void CubeScript::update(atta::Entity entity, float dt)
     // This static variable is shared among all clones, we are using the clone 0 to update the time
     if(cloneId == 0)
     {
-        time += dt*0.2;
+        time += dt*0.1;
         if(time > 2*M_PI) time -= 2*M_PI;
     }
 
+    //----- Transform Component -----//
     atta::TransformComponent* t = entity.getComponent<atta::TransformComponent>();
-
     // Using cloneId to calculate clone specific transform
     unsigned row = cloneId % (unsigned)sqrt(QTY_CLONES);
     unsigned col = cloneId / (unsigned)sqrt(QTY_CLONES);
@@ -33,4 +35,14 @@ void CubeScript::update(atta::Entity entity, float dt)
     t->position.x = row;
     t->position.y = col;
     t->position.z = sin(offset);
+
+    //----- Material Component -----//
+    atta::MaterialComponent* m = entity.getComponent<atta::MaterialComponent>();
+    m->albedo.x = (t->position.z+1.0f)*0.5f;
+    m->albedo.y = 1.0f-m->albedo.x;
+    m->albedo.z = 1.0f;
+
+    //----- Name Component -----//
+    atta::NameComponent* n = entity.getComponent<atta::NameComponent>();
+    strcpy(n->name, ("Cube clone "+std::to_string(cloneId)).c_str());
 }
