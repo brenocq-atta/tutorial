@@ -27,7 +27,6 @@ public:
 	void onUpdateAfter(float delta) override;
 
     //---------- Editor ----------//
-    void onUIUpdate() override;
     void onUIRender() override;
 };
 

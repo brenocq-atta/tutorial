@@ -53,12 +53,6 @@ void Project::onUpdateAfter(float delta)
     // Executed after all entity scripts
 }
 
-void Project::onUIUpdate()
-{
-    // Executed when simulation is not running
-    // onUIUpdate is executed while the simulation is not running. onUpdateAfter and onUpdateBefore is executed before and after each simulation iteration, respectivelly
-}
-
 void Project::onUIRender()
 {
     // UI Render instructions

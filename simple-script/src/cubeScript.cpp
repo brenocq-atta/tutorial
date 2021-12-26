@@ -11,7 +11,7 @@ void CubeScript::update(atta::Entity entity, float dt)
 {
     // Update time
     static float time = 0;
-    time += dt*0.005;
+    time += dt*1.2f;
     if(time > 2*M_PI) time -= 2*M_PI;
 
     // Get the entity transform component
