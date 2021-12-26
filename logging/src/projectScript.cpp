@@ -39,6 +39,7 @@ struct Test
     float val2 = 20.0f;
     Test(int v1, float v2): val1(v1), val2(v2) {}
 };
+// We can define this operator to make a class printable
 inline std::ostream& operator<<(std::ostream& os, const Test& t)
 {
     return os << "Test{val1:" << t.val1 << ", val2:" << t.val2 << "}";
