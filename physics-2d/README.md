@@ -1,8 +1,8 @@
----
+<!--
 title: Physics 2D
 description: Introduction to atta 2D physics
 image: https://storage.googleapis.com/atta-images/docs/tutorial/physics-2d/physics-2d.gif
----
+-->
 # Physics 2D
 
 <div align="center">

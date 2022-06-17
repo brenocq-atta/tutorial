@@ -1,8 +1,8 @@
----
+<!--
 title: Simple Script
 description: Introduction to atta scripts
 image: https://storage.googleapis.com/atta-images/docs/tutorial/simple-script/simple-script.gif
----
+-->
 # Simple Script
 
 <div align="center">

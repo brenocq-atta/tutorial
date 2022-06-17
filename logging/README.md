@@ -1,8 +1,8 @@
----
+<!--
 title: Logging
 description: How to use the atta logging functions to print variable, vectors, colors, etc
 image: https://storage.googleapis.com/atta-images/docs/tutorial/logging/logging.png
----
+-->
 # Logging
 
 <div align="center">
