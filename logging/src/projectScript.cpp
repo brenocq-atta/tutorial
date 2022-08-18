@@ -5,7 +5,6 @@
 // By Breno Cunha Queiroz
 //--------------------------------------------------
 #include "projectScript.h"
-#include <atta/core/math/math.h>
 
 //---------------------------------//
 //---------- Description ----------//
