@@ -1,12 +1,12 @@
 <!--
-title: Materials
+title: Material Resource
 description: Introduction to atta materials
-image: https://storage.googleapis.com/atta-images/docs/tutorial/materials/2022-08-19.png
+image: https://storage.googleapis.com/atta-images/docs/tutorial/material-resource/2022-08-19.png
 -->
-# Materials
+# Material Resource
 
 <div align="center">
-  <img src="https://storage.googleapis.com/atta-images/docs/tutorial/materials/2022-08-19.png" height="400">
+  <img src="https://storage.googleapis.com/atta-images/docs/tutorial/material-resource/2022-08-19.png" height="400">
 </div>
 
 Entities are only rendered with a material if they also have `cmp::Transform` and `cmp::Mesh` components.

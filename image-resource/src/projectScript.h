@@ -1,7 +1,7 @@
 //--------------------------------------------------
-// Logging
+// Image Resource
 // projectScript.h
-// Date: 2021-11-14
+// Date: 2022-08-19
 // By Breno Cunha Queiroz
 //--------------------------------------------------
 #ifndef PROJECT_SCRIPT_H
@@ -13,6 +13,11 @@ namespace scr = atta::script;
 class Project : public scr::ProjectScript {
   public:
     void onLoad() override;
+    void onAttaLoop() override;
+
+  private:
+    void updateAnimation();
+    void updateGameOfLife();
 };
 
 ATTA_REGISTER_PROJECT_SCRIPT(Project)
