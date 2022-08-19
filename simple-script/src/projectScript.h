@@ -6,10 +6,9 @@
 //--------------------------------------------------
 #ifndef PROJECT_SCRIPT_H
 #define PROJECT_SCRIPT_H
-#include <atta/pch.h>
-#include <atta/scriptSystem/projectScript.h>
+#include <atta/script/projectScript.h>
 
-class Project : public atta::ProjectScript
+class Project : public atta::script::ProjectScript
 {
 public:
     //---------- Load/Unload ----------//

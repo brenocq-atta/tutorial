@@ -6,13 +6,12 @@
 //--------------------------------------------------
 #ifndef CUBE_SCRIPT_H
 #define CUBE_SCRIPT_H
-#include <atta/pch.h>
-#include <atta/scriptSystem/script.h>
+#include <atta/script/script.h>
 
-class CubeScript : public atta::Script
+class CubeScript : public atta::script::Script
 {
 public:
-    void update(atta::Entity entity, float dt) override;
+    void update(atta::component::Entity entity, float dt) override;
 };
 
 ATTA_REGISTER_SCRIPT(CubeScript)

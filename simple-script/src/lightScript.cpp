@@ -5,9 +5,11 @@
 // By Breno Cunha Queiroz
 //--------------------------------------------------
 #include "lightScript.h"
-#include <atta/componentSystem/components/transformComponent.h>
+#include <atta/component/components/transform.h>
 
-void LightScript::update(atta::Entity entity, float dt)
+namespace cmp = atta::component;
+
+void LightScript::update(cmp::Entity entity, float dt)
 {
     // Update time
     static float time = 0;
@@ -16,7 +18,7 @@ void LightScript::update(atta::Entity entity, float dt)
     if(time > 2*M_PI) time -= 2*M_PI;
 
     // Get the entity transform component
-    atta::TransformComponent* t = entity.getComponent<atta::TransformComponent>();
+    cmp::Transform* t = entity.get<cmp::Transform>();
 
     // Rotate the point lights using the entityId as offset
     t->position.x = 1.2f*cos(time+(float)entity.getId()*2);
