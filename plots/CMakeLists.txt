@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required(VERSION 3.14)
 project(plots VERSION 1.0.0 LANGUAGES CXX)
 find_package(atta 0.1.0.0 REQUIRED)
 
