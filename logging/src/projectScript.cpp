@@ -65,6 +65,8 @@ void Project::onLoad()
     int i = 10;
     std::vector<float> vec = {0,1,2,3,4};
     LOG_DEBUG("Project", "int: $0", i);
+    LOG_DEBUG("Project", "int: $x0", 0xcafe);
+    LOG_DEBUG("Project", "int: $b0", 0b101010);
     LOG_DEBUG("Project", "float: $0", 3.1415f);
     LOG_DEBUG("Project", "pointer: $0", (void*)&i);
 
