@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 project(simple-script VERSION 1.0.0 LANGUAGES CXX)
-find_package(atta 0.1.0.0 REQUIRED)
+find_package(atta 0.2.0.0 REQUIRED)
 
 # The CMakeLists.txt lists all scripts that will be exposed to the atta.
 # This example creates one project script: projectScript
