@@ -25,9 +25,11 @@ showInfrareds = true
 
 [material]
 id = "Animation"
+colorImage = "animation"
 
 [material]
 id = "Game of life"
+colorImage = "gameOfLife"
 
 [material]
 id = "Material"
@@ -36,9 +38,10 @@ id = "Material"
 name = "Main Viewport"
 renderer.type = "FastRenderer"
 camera.type = "OrthographicCamera"
-camera.position = vec3(0.000000, 0.000000, 10.000000)
-camera.lookAt = vec3(0.000000, 0.000000, 9.000000)
-camera.up = vec3(0.000000, -1.000000, -0.000000)
+camera.position = vec3(0.007911, 0.055379, 10.000000)
+camera.lookAt = vec3(0.007911, 0.055379, 9.000000)
+camera.up = vec3(0.000000, 1.000000, 0.000000)
+camera.height = 2.500000
 
 [node]
 id = 0
