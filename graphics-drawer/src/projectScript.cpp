@@ -19,7 +19,7 @@ void Project::onLoad() {
     gfx::Drawer::add(line, "lines");
 
     // Square
-    std::vector<atta::vec3> vertices = std::vector<atta::vec3>{{-1, -1, 0}, {1, -1, 0}, {1, 1, 0}, {-1, 1, 0}};
+    std::vector<atta::vec3> vertices = std::vector<atta::vec3>{{-0.9, -0.9, 0}, {0.9, -0.9, 0}, {0.9, 0.9, 0}, {-0.9, 0.9, 0}};
     std::vector<atta::vec4> colors = std::vector<atta::vec4>{{1, 1, 0, 1}, {1, 0, 1, 1}, {0, 1, 1, 1}, {1, 0, 1, 1}};
     for (int i = 0; i < vertices.size(); i++) {
         int i0 = i;
@@ -41,8 +41,8 @@ void Project::onUpdateBefore(float dt) {
     gfx::Drawer::Line line;
     for (int i = 0; i < 100; i++) {
         float angle = i / float(100) * M_PI * 2;
-        float c = cos(angle + time / 100);
-        float s = sin(angle + time / 100);
+        float c = cos(angle + time / 10);
+        float s = sin(angle + time / 10);
         point.p = {c, s, 1};
         point.c = {(c + 1) / 2, (s + 1) / 2, 1, 1};
         gfx::Drawer::add(point, "circle");
