@@ -7,33 +7,28 @@
 #include "projectScript.h"
 #include "imgui.h"
 #include <atta/component/components/material.h>
-#include <atta/component/components/transform.h>
 #include <atta/component/components/relationship.h>
+#include <atta/component/components/transform.h>
 #include <atta/component/interface.h>
-#include <atta/physics/interface.h>
-#include <atta/graphics/interface.h>
 #include <atta/graphics/drawer.h>
+#include <atta/graphics/interface.h>
+#include <atta/physics/interface.h>
 
-namespace cmp = atta::component;
-namespace phy = atta::physics;
-namespace gfx = atta::graphics;
-
-const cmp::Entity ctrl0(7);
-const cmp::Entity ctrl1(8);
 const cmp::Entity boxes(0);
+const cmp::Entity ctrl0(6);
+const cmp::Entity ctrl1(7);
 
 void Project::onUpdateBefore(float delta) {
     // Reset materials
-    for(cmp::Entity box : boxes.get<cmp::Relationship>()->getChildren())
-        box.get<cmp::Material>()->set("not-hit");
+    for (cmp::Entity box : boxes.get<cmp::Relationship>()->getChildren())
+        box.get<cmp::Material>()->set("no-hit");
 
-    // Set hit materials 
+    // Set hit materials
     atta::vec3 begin = ctrl0.get<cmp::Transform>()->position;
     atta::vec3 end = ctrl1.get<cmp::Transform>()->position;
-    std::vector<cmp::EntityId> hitted = phy::rayCast(begin, end, _onlyFirst);
-    for(cmp::Entity box : hitted)
-        box.get<cmp::Material>()->set("hit");
-
+    std::vector<phy::RayCastHit> hits = phy::rayCast(begin, end, _onlyFirst);
+    for (const auto& hit : hits)
+        hit.entity.get<cmp::Material>()->set("hit");
 }
 
 void Project::onAttaLoop() {
@@ -50,6 +45,7 @@ void Project::onAttaLoop() {
 }
 
 void Project::onUIRender() {
+    ImGui::SetNextWindowSize({150, 80}, ImGuiCond_Once);
     ImGui::Begin("Ray cast control");
     ImGui::Checkbox("Only first", &_onlyFirst);
     ImGui::End();
