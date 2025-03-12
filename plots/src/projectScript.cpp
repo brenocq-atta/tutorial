@@ -12,14 +12,21 @@
 void Project::onUIRender() {
     std::vector<float> x = {0, 1, 2, 3, 4};
     std::vector<float> y = {0, .5, 3, .5, 1};
+    std::vector<float> z = {0, .2, 1, .3, 0.8};
 
     ImGui::SetNextWindowSize(ImVec2(500, 400), ImGuiCond_Once);
     ImGui::Begin("Plot window");
     {
-        ImGui::Text("This is a line plot");
-        if (ImPlot::BeginPlot("LinePlot")) {
+        ImGui::Text("This is a 2D line plot");
+        if (ImPlot::BeginPlot("2DLinePlot")) {
             ImPlot::PlotLine("Line", x.data(), y.data(), x.size());
             ImPlot::EndPlot();
+        }
+
+        ImGui::Text("This is a 3D line plot");
+        if (ImPlot3D::BeginPlot("3DLinePlot")) {
+            ImPlot3D::PlotLine("Line", x.data(), y.data(), z.data(), x.size());
+            ImPlot3D::EndPlot();
         }
     }
     ImGui::End();
