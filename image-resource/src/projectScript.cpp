@@ -10,17 +10,13 @@
 #include <atta/resource/resources/image.h>
 #include <chrono>
 
-namespace rsc = atta::resource;
-namespace cmp = atta::component;
-const cmp::Entity plane(0);
-
 void Project::onLoad() {
-    rsc::Image::CreateInfo info;
+    res::Image::CreateInfo info;
     info.width = 100;
     info.height = 100;
-    info.format = rsc::Image::Format::RGBA8;
-    rsc::Image* img = rsc::create<rsc::Image>("animation", info);
-    rsc::Image* gameOfLife = rsc::create<rsc::Image>("gameOfLife", info);
+    info.format = res::Image::Format::RGBA8;
+    res::Image* img = res::create<res::Image>("animation", info);
+    res::Image* gameOfLife = res::create<res::Image>("gameOfLife", info);
 
     // Init gameOfLife as white
     uint8_t* data = gameOfLife->getData();
@@ -64,7 +60,7 @@ void Project::updateAnimation() {
     int time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() / 50;
 
     // Change random pattern with time
-    rsc::Image* img = rsc::get<rsc::Image>("animation");
+    res::Image* img = res::get<res::Image>("animation");
     uint32_t w = img->getWidth();
     uint32_t h = img->getHeight();
     uint8_t* data = img->getData();
@@ -88,13 +84,13 @@ void Project::updateAnimation() {
 void Project::updateGameOfLife() {
     static auto start = std::chrono::system_clock::now();
     auto end = std::chrono::system_clock::now();
-    int time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count()/100;
+    int time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() / 100;
 
     // Update every second
     if (time > 0) {
         start = end;
 
-        rsc::Image* gameOfLife = rsc::get<rsc::Image>("gameOfLife");
+        res::Image* gameOfLife = res::get<res::Image>("gameOfLife");
         uint32_t w = gameOfLife->getWidth();
         uint32_t h = gameOfLife->getHeight();
         uint8_t* data = gameOfLife->getData();

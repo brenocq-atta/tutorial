@@ -11,4 +11,4 @@ image: https://storage.googleapis.com/atta-images/docs/tutorial/image-resource/2
 
 Images can be created and updated dynamically in atta.
 
-In this example we create two planes and update their textures dynamically. 
+In this example we create two planes and update their textures dynamically.
