@@ -8,10 +8,10 @@
 #define CUBE_SCRIPT_H
 #include <atta/script/script.h>
 
-class CubeScript : public atta::script::Script
+class CubeScript : public scr::Script
 {
 public:
-    void update(atta::component::Entity entity, float dt) override;
+    void update(cmp::Entity entity, float dt) override;
 };
 
 ATTA_REGISTER_SCRIPT(CubeScript)

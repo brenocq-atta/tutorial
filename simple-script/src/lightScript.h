@@ -8,10 +8,10 @@
 #define LIGHT_SCRIPT_H
 #include <atta/script/script.h>
 
-class LightScript : public atta::script::Script
+class LightScript : public scr::Script
 {
 public:
-    void update(atta::component::Entity entity, float dt) override;
+    void update(cmp::Entity entity, float dt) override;
 };
 
 ATTA_REGISTER_SCRIPT(LightScript)
