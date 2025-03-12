@@ -8,8 +8,6 @@
 #define PROJECT_SCRIPT_H
 #include <atta/script/projectScript.h>
 
-namespace scr = atta::script;
-
 class Project : public scr::ProjectScript {
   public:
     void onStop() override;

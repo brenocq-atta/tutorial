@@ -9,9 +9,6 @@
 #include <atta/component/interface.h>
 #include <atta/physics/interface.h>
 
-namespace cmp = atta::component;
-namespace phy = atta::physics;
-
 const cmp::Entity ground(0);
 const cmp::Entity box(1);
 
