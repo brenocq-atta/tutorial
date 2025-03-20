@@ -9,9 +9,7 @@
 #include <atta/component/interface.h>
 #include <atta/script/projectScript.h>
 
-namespace cmp = atta::component;
-
-class Project : public atta::script::ProjectScript {
+class Project : public scr::ProjectScript {
   public:
     void onStart() override;
     void onStop() override;

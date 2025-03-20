@@ -23,7 +23,7 @@ void Project::onStart() {
     _redCube.add<cmp::Mesh>()->set("meshes/cube.obj");
 
     rsc::Material* red = rsc::get<rsc::Material>("red");
-    red->color = {1, 0, 0};
+    red->setColor({1, 0, 0});
     _redCube.add<cmp::Material>()->set(red);
 
     _pointLight = cmp::createEntity();
@@ -37,7 +37,7 @@ void Project::onStart() {
             _spheres.push_back(sphere);
             sphere.add<cmp::Name>()->set("Sphere " + std::to_string(x) + " " + std::to_string(y));
 
-            sphere.add<cmp::Transform>()->position = {(x-2) / 10.0f, (y-2) / 10.0f, 0.5f};
+            sphere.add<cmp::Transform>()->position = {(x - 2) / 10.0f, (y - 2) / 10.0f, 0.5f};
             sphere.get<cmp::Transform>()->scale = atta::vec3(0.05);
 
             sphere.add<cmp::Mesh>()->set("meshes/sphere.obj");
@@ -48,7 +48,7 @@ void Project::onStart() {
 void Project::onStop() {
     cmp::deleteEntity(_redCube);
     cmp::deleteEntity(_pointLight);
-    for(cmp::Entity sphere : _spheres)
+    for (cmp::Entity sphere : _spheres)
         cmp::deleteEntity(sphere);
     _spheres.clear();
 };
