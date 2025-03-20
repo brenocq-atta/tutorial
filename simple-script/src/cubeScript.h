@@ -6,7 +6,7 @@
 //--------------------------------------------------
 #ifndef CUBE_SCRIPT_H
 #define CUBE_SCRIPT_H
-#include <atta/script/script.h>
+#include <atta/script/interface.h>
 
 class CubeScript : public scr::Script {
   public:

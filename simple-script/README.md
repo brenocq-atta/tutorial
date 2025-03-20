@@ -2,6 +2,7 @@
 title: Simple Script
 description: Introduction to atta scripts
 image: https://storage.googleapis.com/atta-images/docs/tutorial/simple-script/simple-script.gif
+build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/simple-script
 -->
 # Simple Script
 
@@ -21,7 +22,7 @@ To a script be recognized by atta, its target must be created in the `CMakeLists
 
 ```cmake
 ...
-find_package(atta 0.0.0.3 REQUIRED)
+find_package(atta 0.3.6 REQUIRED)
 ...
 atta_add_target(projectScript "src/projectScript.cpp")
 ```

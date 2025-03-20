@@ -6,7 +6,7 @@
 //--------------------------------------------------
 #ifndef LIGHT_SCRIPT_H
 #define LIGHT_SCRIPT_H
-#include <atta/script/script.h>
+#include <atta/script/interface.h>
 
 class LightScript : public scr::Script {
   public:

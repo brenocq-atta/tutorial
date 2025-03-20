@@ -6,7 +6,7 @@
 //--------------------------------------------------
 #ifndef PROJECT_SCRIPT_H
 #define PROJECT_SCRIPT_H
-#include <atta/script/projectScript.h>
+#include <atta/script/interface.h>
 
 class Project : public scr::ProjectScript {
   public:
