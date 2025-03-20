@@ -2,6 +2,7 @@
 title: Ray Cast
 description: How to perform ray casting with 2D physics
 image: https://storage.googleapis.com/atta-images/docs/tutorial/physics-2d/ray-cast/ray-cast.gif
+build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/physics-2d/ray-cast
 -->
 # Ray Cast
 

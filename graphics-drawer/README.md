@@ -2,6 +2,7 @@
 title: Graphics Drawer
 description: How to draw lines and points
 image: https://storage.googleapis.com/atta-images/docs/tutorial/graphics-drawer/2022-08-20.gif
+build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/graphics-drawer
 -->
 # Graphics Drawer
 

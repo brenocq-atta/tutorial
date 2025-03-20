@@ -2,6 +2,7 @@
 title: Entity Spawn
 description: How to create entities with code
 image: https://storage.googleapis.com/atta-images/docs/tutorial/entity-spawn/2022-08-20.png
+build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/entity-spawn
 -->
 # Entity Spawn
 

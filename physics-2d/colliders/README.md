@@ -2,6 +2,7 @@
 title: Colliders
 description: Introduction to 2D colliders
 image: https://storage.googleapis.com/atta-images/docs/tutorial/physics-2d/colliders/colliders.gif
+build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/physics-2d/colliders
 -->
 # Colliders
 

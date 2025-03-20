@@ -2,6 +2,7 @@
 title: Image Resource
 description: Introduction to atta images
 image: https://storage.googleapis.com/atta-images/docs/tutorial/image-resource/2022-08-20.gif
+build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/image-resource
 -->
 # Image Resource
 

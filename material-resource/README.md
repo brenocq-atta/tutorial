@@ -2,6 +2,7 @@
 title: Material Resource
 description: Introduction to atta materials
 image: https://storage.googleapis.com/atta-images/docs/tutorial/material-resource/2022-08-19.png
+build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/material-resource
 -->
 # Material Resource
 
