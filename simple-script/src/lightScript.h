@@ -8,12 +8,11 @@
 #define LIGHT_SCRIPT_H
 #include <atta/script/script.h>
 
-class LightScript : public scr::Script
-{
-public:
+class LightScript : public scr::Script {
+  public:
     void update(cmp::Entity entity, float dt) override;
 };
 
 ATTA_REGISTER_SCRIPT(LightScript)
 
-#endif// LIGHT_SCRIPT_H
+#endif // LIGHT_SCRIPT_H

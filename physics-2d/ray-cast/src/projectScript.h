@@ -13,6 +13,7 @@ class Project : public scr::ProjectScript {
     void onUpdateBefore(float delta) override;
     void onAttaLoop() override;
     void onUIRender() override;
+
   private:
     bool _onlyFirst = false;
 };

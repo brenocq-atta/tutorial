@@ -8,22 +8,21 @@
 #define PROJECT_SCRIPT_H
 #include <atta/script/projectScript.h>
 
-class Project : public scr::ProjectScript
-{
-public:
+class Project : public scr::ProjectScript {
+  public:
     //---------- Load/Unload ----------//
-	void onLoad() override;
-	void onUnload() override;
+    void onLoad() override;
+    void onUnload() override;
 
     //---------- Simulation ----------//
-	void onStart() override;
-	void onStop() override;
+    void onStart() override;
+    void onStop() override;
 
-	void onContinue() override;
-	void onPause() override;
+    void onContinue() override;
+    void onPause() override;
 
-	void onUpdateBefore(float delta) override;
-	void onUpdateAfter(float delta) override;
+    void onUpdateBefore(float delta) override;
+    void onUpdateAfter(float delta) override;
 
     //---------- Editor ----------//
     void onUIRender() override;
@@ -31,4 +30,4 @@ public:
 
 ATTA_REGISTER_PROJECT_SCRIPT(Project)
 
-#endif// PROJECT_SCRIPT_H
+#endif // PROJECT_SCRIPT_H
