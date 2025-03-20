@@ -2,6 +2,7 @@
 title: Cube Factory
 description: How to create multiple clones of the same entity using prototypes
 image: https://storage.googleapis.com/atta-images/docs/tutorial/cube-factory/cube-factory.gif
+build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/cube-factory
 -->
 # Cube Factory
 
