@@ -2,7 +2,6 @@
 title: Material Resource
 description: Introduction to atta materials
 image: https://storage.googleapis.com/atta-images/docs/tutorial/material-resource/2022-08-19.png
-build: https://atta-repos.s3.us-east-1.amazonaws.com/tutorial/material-resource
 -->
 # Material Resource
 
@@ -18,7 +17,7 @@ All images in the `resources/` folders are automatically loaded by atta and can 
 
 If you don't want to upload the resource files to github, check the `CMakeLists.txt` to see an example of using cmake to download the resources automatically when building.
 
-Each material has 4 attributes: 
+Each material has 4 attributes:
  - `color`
  - `roughness`
  - `metallic`
