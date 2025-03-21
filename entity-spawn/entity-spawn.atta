@@ -1,5 +1,5 @@
 [project]
-attaVersion = "0.3.6"
+attaVersion = "0.3.7"
 name = "entity-spawn"
 
 [config]
@@ -39,17 +39,7 @@ color = vec3(0.500000, 0.500000, 0.500000)
 name = "Main Viewport"
 renderer.type = "PbrRenderer"
 camera.type = "PerspectiveCamera"
-camera.position = vec3(1.224173, 0.883968, 1.702054)
-camera.lookAt = vec3(0.665931, 0.492257, 0.970666)
-camera.up = vec3(-0.598702, -0.420101, 0.681961)
-
-[node]
-id = 0
-material.sid = "defaultMaterial.0"
-mesh.sid = "meshes/sphere.obj"
-name.name = "Point light"
-pointLight.intensity = vec3(1.000000, 1.000000, 1.000000)
-transform.position = vec3(-1.135253, 1.089996, 1.554726)
-transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
-transform.scale = vec3(0.100000, 0.100000, 0.100000)
+camera.position = vec3(3.302530, 2.570743, 3.735607)
+camera.lookAt = vec3(2.684259, 2.068960, 3.130664)
+camera.up = vec3(-0.469713, -0.381215, 0.796269)
 
