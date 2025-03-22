@@ -73,20 +73,24 @@ aoImage = "wall/ao.png"
 id = "White"
 color = vec3(1.000000, 1.000000, 1.000000)
 
+[material]
+id = "Yellow"
+color = vec3(1.000000, 1.000000, 0.000000)
+
 [viewport]
 name = "Main Viewport"
 renderer.type = "PbrRenderer"
 camera.type = "PerspectiveCamera"
-camera.position = vec3(-0.036589, -3.519823, 2.841933)
-camera.lookAt = vec3(-0.013712, -2.658998, 2.333546)
-camera.up = vec3(0.013506, 0.508208, 0.861129)
+camera.position = vec3(-0.311544, -3.468008, 4.850393)
+camera.lookAt = vec3(-0.302532, -2.794750, 4.111040)
+camera.up = vec3(0.009896, 0.739286, 0.673318)
 
 [node]
 id = 0
 material.sid = "Plastic"
 mesh.sid = "meshes/sphere.obj"
 name.name = "Plastic"
-transform.position = vec3(-2.000000, 0.000000, 0.000000)
+transform.position = vec3(-2.000000, 0.000000, 1.000000)
 transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
 transform.scale = vec3(0.900000, 0.900000, 0.900000)
 
@@ -95,7 +99,7 @@ id = 1
 material.sid = "Gold"
 mesh.sid = "meshes/sphere.obj"
 name.name = "Gold"
-transform.position = vec3(-1.000000, 0.000000, 0.000000)
+transform.position = vec3(-1.000000, 0.000000, 1.000000)
 transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
 transform.scale = vec3(0.900000, 0.900000, 0.900000)
 
@@ -104,7 +108,7 @@ id = 2
 material.sid = "Grass"
 mesh.sid = "meshes/sphere.obj"
 name.name = "Grass"
-transform.position = vec3(0.000000, 0.000000, 0.000000)
+transform.position = vec3(0.000000, 0.000000, 1.000000)
 transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
 transform.scale = vec3(0.900000, 0.900000, 0.900000)
 
@@ -113,7 +117,7 @@ id = 3
 material.sid = "Iron"
 mesh.sid = "meshes/sphere.obj"
 name.name = "Rusted Iron"
-transform.position = vec3(1.000000, 0.000000, 0.000000)
+transform.position = vec3(1.000000, 0.000000, 1.000000)
 transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
 transform.scale = vec3(0.900000, 0.900000, 0.900000)
 
@@ -122,7 +126,7 @@ id = 4
 material.sid = "Wall"
 mesh.sid = "meshes/sphere.obj"
 name.name = "Wall"
-transform.position = vec3(2.000000, 0.000000, 0.000000)
+transform.position = vec3(2.000000, 0.000000, 1.000000)
 transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
 transform.scale = vec3(0.900000, 0.900000, 0.900000)
 
@@ -131,17 +135,34 @@ id = 5
 material.sid = "Gun"
 mesh.sid = "gun/gun.FBX"
 name.name = "Gun"
-transform.position = vec3(0.503672, -0.001470, 0.917146)
+transform.position = vec3(0.503672, -0.001470, 2.000000)
 transform.orientation = quat(0.000000, 0.000000, 0.708138, 0.706074)
 transform.scale = vec3(0.010000, 0.010000, 0.010000)
 
 [node]
 id = 6
-material.sid = "White"
+material.sid = "Yellow"
 mesh.sid = "meshes/sphere.obj"
 name.name = "Point Light"
 pointLight.intensity = vec3(5.000000, 5.000000, 5.000000)
-transform.position = vec3(0.000000, 0.000000, 2.273120)
+transform.position = vec3(0.000000, 0.000000, 3.000000)
 transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
 transform.scale = vec3(0.100000, 0.100000, 0.100000)
+
+[node]
+id = 7
+material.sid = "Material"
+mesh.sid = "meshes/cube.obj"
+name.name = "Ground"
+transform.position = vec3(0.000000, 0.000000, 0.000000)
+transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
+transform.scale = vec3(8.000000, 8.000000, 0.100000)
+
+[node]
+id = 8
+directionalLight.intensity = vec3(1.000000, 1.000000, 1.000000)
+name.name = "Directional light"
+transform.position = vec3(0.000000, 0.000000, 2.548024)
+transform.orientation = quat(0.000000, 0.000000, 0.000000, 1.000000)
+transform.scale = vec3(1.000000, 1.000000, 1.000000)
 
